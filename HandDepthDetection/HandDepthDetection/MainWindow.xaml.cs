@@ -180,30 +180,35 @@ namespace HandDepthDetection
 
         private void Detection(System.Drawing.Bitmap bitmap)
         {
-            string file = @"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml";
+            string file = @"C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\classifier\cascade.xml";
             haar = new CascadeClassifier(file); 
-            //haar = new HaarCascade(file);
-            //Image<Gray, Byte> myDepthImage;  
-            int a = 5; 
-            Image<Gray, Byte> frameDepth; 
-            frameDepth = new Image<Gray, Byte>(bitmap);
+
+            Image<Gray, Byte> frameDepth = new Image<Gray, Byte>(bitmap);
+            byte[] pixeles;
+            WriteableBitmap wbitmap;
+            Image<Gray, Byte> manita = new Image<Gray, Byte>(bitmap);
+
+            //Int32Rect rectwbitmap; 
 
             //using(Image<Gray, Byte> frameDepth = new Image<Gray,Byte>(bitmap)) 
             //{
                 if (frameDepth != null)
                 { 
                     
-                    var hands = haar.DetectMultiScale(frameDepth,1.4,0,new  System.Drawing.Size(frameDepth.Width/8, frameDepth.Height/8), new  System.Drawing.Size(frameDepth.Width/6, frameDepth.Height/6));
+                    System.Drawing.Rectangle[] hands = haar.DetectMultiScale(frameDepth, 1.4, 0, new  System.Drawing.Size(frameDepth.Width/8, frameDepth.Height/8), new  System.Drawing.Size(frameDepth.Width/3, frameDepth.Height/3));
                     //var hands= frameDepth.DetectHaarCascade(haar, 1.4, 4, HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new  System.Drawing.Size(frameDepth.Width/6, frameDepth.Height/6))[0];
 
-                    foreach (var hand in hands)
+                    foreach (System.Drawing.Rectangle roi in hands)
                     {  
-                        System.Drawing.Rectangle Roi = new System.Drawing.Rectangle(10,10,20,20);
+                        //System.Drawing.Rectangle Roi = new System.Drawing.Rectangle(10,10,20,20);
                         Gray  colorcillo = new Gray(double.MaxValue);  
-                        
-                        frameDepth.Draw(Roi,colorcillo, 3);
-                
-                    }
+                        frameDepth.Draw( roi,colorcillo, 3);
+                         
+                    } 
+                    pixeles = frameDepth.Bytes;
+                    wbitmap = new WriteableBitmap(640, 480, 96, 96, PixelFormats.Gray8, null);
+                    wbitmap.WritePixels(new Int32Rect(0, 0, 640, 480), pixeles, 640, 0);
+                    image1.Source = wbitmap; 
                 }
            // }     
         }//finaliza detection()
