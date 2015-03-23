@@ -1,9 +1,9 @@
 ﻿<Window x:Class="HandDepthDetection.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Hand Detection" Height="350" Width="525" Loaded="Window_Loaded">
+        Title="Hand Detection" Height="1080" Width="1920" Loaded="Window_Loaded">
     <Grid>
-        <Image Height="251" HorizontalAlignment="Left" Margin="56,35,0,0" Name="DepthImage" Stretch="Fill" VerticalAlignment="Top" Width="212" />
-        <Image Height="117" HorizontalAlignment="Left" Margin="336,145,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="87" />
+        <Image Height="1017" HorizontalAlignment="Left" Margin="0,24,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="1886" ImageFailed="image1_ImageFailed" />
+        <Image Height="244" HorizontalAlignment="Left" Margin="1478,797,0,0" Name="DepthImage" Stretch="Fill" VerticalAlignment="Top" Width="420" />
     </Grid>
 </Window>

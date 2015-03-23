@@ -81,3 +81,4 @@ C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\HandDepthDetecti
 C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\HandDepthDetection\HandDepthDetection\obj\x86\Debug\HandDepthDetection.g.resources
 C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\HandDepthDetection\HandDepthDetection\obj\x86\Debug\HandDepthDetection.Properties.Resources.resources
 C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\HandDepthDetection\HandDepthDetection\obj\x86\Debug\HandDepthDetection.csproj.GenerateResource.Cache
+C:\Users\America\Documents\opencv-haar-clasisifier-training\HandDepthDetection\HandDepthDetection\obj\x86\Debug\HandDepthDetection.csprojResolveAssemblyReference.cache

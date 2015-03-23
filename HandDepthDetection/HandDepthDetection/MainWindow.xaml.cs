@@ -56,7 +56,7 @@ namespace HandDepthDetection
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //haar = new HaarCascade(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml");
-            //haar = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml"); 
+            haar = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml"); 
             EncuentraInicializaKinect();
             CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);  
         }
@@ -150,12 +150,12 @@ namespace HandDepthDetection
 
             }
 
-            if (grabaImagen)
-            { 
+            //if (grabaImagen)
+            //{ 
                 bitmapDepth = convertWriteablebitmap(DepthImagenBitmap);
                 Detection(bitmapDepth);
-                grabaImagen = false; 
-            }
+                //grabaImagen = false; 
+            //}
 
             return DepthImagenBitmap;
         }//fin PollDepth()
@@ -180,8 +180,8 @@ namespace HandDepthDetection
 
         private void Detection(System.Drawing.Bitmap bitmap)
         {
-            string file = @"C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\classifier\cascade.xml";
-            haar = new CascadeClassifier(file); 
+            //string file = @"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml";
+            //haar = new CascadeClassifier(file); 
 
             Image<Gray, Byte> frameDepth = new Image<Gray, Byte>(bitmap);
             byte[] pixeles;
@@ -208,9 +208,15 @@ namespace HandDepthDetection
                     pixeles = frameDepth.Bytes;
                     wbitmap = new WriteableBitmap(640, 480, 96, 96, PixelFormats.Gray8, null);
                     wbitmap.WritePixels(new Int32Rect(0, 0, 640, 480), pixeles, 640, 0);
-                    image1.Source = wbitmap; 
+                    image1.Source = wbitmap;  
+
                 }
            // }     
+        }
+
+        private void image1_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+
         }//finaliza detection()
 
 
