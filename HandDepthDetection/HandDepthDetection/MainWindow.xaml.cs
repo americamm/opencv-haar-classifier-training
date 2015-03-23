@@ -34,12 +34,7 @@ namespace HandDepthDetection
         private Int32Rect DepthImagenRect;
         private int DepthImagenStride;
         private byte[] DepthImagenPixeles;
-        private short[] DepthValores;
-        bool grabacion = false;
-        bool grabaImagen = true; 
-        List<WriteableBitmap> imagenesDepth = new List<WriteableBitmap>();
-
-        //private HaarCascade haar;
+        private short[] DepthValores; 
         private CascadeClassifier haar;
         //:::::::::::::fin variables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 
@@ -55,8 +50,8 @@ namespace HandDepthDetection
         //::::::::::::Se realizan los metodos cuando se carga la ventana:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //haar = new HaarCascade(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml");
-            haar = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml"); 
+            haar = new CascadeClassifier(@"C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\classifier\cascade.xml"); //Laptop
+            //haar = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml"); //La compu de escritorio
             EncuentraInicializaKinect();
             CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);  
         }
@@ -150,12 +145,8 @@ namespace HandDepthDetection
 
             }
 
-            //if (grabaImagen)
-            //{ 
-                bitmapDepth = convertWriteablebitmap(DepthImagenBitmap);
-                Detection(bitmapDepth);
-                //grabaImagen = false; 
-            //}
+            bitmapDepth = convertWriteablebitmap(DepthImagenBitmap);
+            Detection(bitmapDepth);
 
             return DepthImagenBitmap;
         }//fin PollDepth()
@@ -180,27 +171,17 @@ namespace HandDepthDetection
 
         private void Detection(System.Drawing.Bitmap bitmap)
         {
-            //string file = @"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml";
-            //haar = new CascadeClassifier(file); 
-
             Image<Gray, Byte> frameDepth = new Image<Gray, Byte>(bitmap);
             byte[] pixeles;
             WriteableBitmap wbitmap;
             Image<Gray, Byte> manita = new Image<Gray, Byte>(bitmap);
 
-            //Int32Rect rectwbitmap; 
-
-            //using(Image<Gray, Byte> frameDepth = new Image<Gray,Byte>(bitmap)) 
-            //{
-                if (frameDepth != null)
-                { 
-                    
+            if (frameDepth != null)
+              { 
                     System.Drawing.Rectangle[] hands = haar.DetectMultiScale(frameDepth, 1.4, 0, new  System.Drawing.Size(frameDepth.Width/8, frameDepth.Height/8), new  System.Drawing.Size(frameDepth.Width/3, frameDepth.Height/3));
-                    //var hands= frameDepth.DetectHaarCascade(haar, 1.4, 4, HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new  System.Drawing.Size(frameDepth.Width/6, frameDepth.Height/6))[0];
 
                     foreach (System.Drawing.Rectangle roi in hands)
                     {  
-                        //System.Drawing.Rectangle Roi = new System.Drawing.Rectangle(10,10,20,20);
                         Gray  colorcillo = new Gray(double.MaxValue);  
                         frameDepth.Draw( roi,colorcillo, 3);
                          
@@ -209,15 +190,13 @@ namespace HandDepthDetection
                     wbitmap = new WriteableBitmap(640, 480, 96, 96, PixelFormats.Gray8, null);
                     wbitmap.WritePixels(new Int32Rect(0, 0, 640, 480), pixeles, 640, 0);
                     image1.Source = wbitmap;  
-
-                }
-           // }     
-        }
+              }
+        }//finaliza detection()
 
         private void image1_ImageFailed(object sender, ExceptionRoutedEventArgs e)
         {
 
-        }//finaliza detection()
+        }
 
 
     }//END CLASS
