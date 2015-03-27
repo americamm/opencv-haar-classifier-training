@@ -8,8 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cudart64_32_16.dll")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cufft64_32_16.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cvextern.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("opencl.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("opencv_calib3d2410.dll")]
