@@ -30,14 +30,23 @@ namespace Checkout3Classifiers
     {
         //::::::::::::::Variables:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         private KinectSensor Kinect;
-        //private WriteableBitmap DepthImagenBitmap;
-        //private Int32Rect DepthImagenRect;
-        //private int DepthImagenStride;
+        private WriteableBitmap ImagenWriteablebitmap;
+        private Int32Rect WriteablebitmapRect;
+        private int WriteablebitmapStride;
+        private DepthImageStream DepthStream;
         private byte[] DepthImagenPixeles;
         private short[] DepthValoresStream;
         private Image<Gray, Byte> depthFrameKinect; 
-        private CascadeClassifier haar;
-        //:::::::::::::fin variables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        private CascadeClassifier haar1;
+        private CascadeClassifier haar2;
+        private CascadeClassifier haar3;
+        private string path1 = @"C:\imagenesClassifiers\Primero\";
+        private string path2 = @"C:\imagenesClassifiers\Test\";
+        private string path3 = @"C:\imagenesClassifiers\TestResize\"; 
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        //:::::::::::::fin variables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
         //:::::::::::::Constructor:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -51,8 +60,12 @@ namespace Checkout3Classifiers
         //:::::::::::::Call Methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            haar1 = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml"); //La compu de escritorio
+            haar2 = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\Mas Clasificadores\test\classifier\cascade.xml");
+            haar3 = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\Mas Clasificadores\test_resize\classifier\cascade.xml");
+
             EncuentraInicializaKinect();
-            PollDepth();
+            CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);  
         } 
         //:::::::::::::end event::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -79,19 +92,44 @@ namespace Checkout3Classifiers
         } //fin EncuentraKinect()   
 
 
-        private void PollDepth()
+        private void CompositionTarget_Rendering(object sender, EventArgs e)
         {
-      
-            //Bitmap bitmapDepth;
+            Image<Gray, Byte> imageHaar1;
+            Image<Gray, Byte> imageHaar2;
+            Image<Gray, Byte> imageHaar3;
+            
 
+            EncuentraInicializaKinect();
+            imageHaar1 = PollDepth();
+            imageHaar2 = PollDepth();
+            imageHaar3 = PollDepth(); 
+            imageHaar1 = Detection(haar1, imageHaar1);
+            imageHaar2 = Detection(haar2, imageHaar2);
+            imageHaar3 = Detection(haar3, imageHaar3);
+
+            if (i < 100)
+            {
+                guardaimagen(imageHaar1, path1, i);
+                guardaimagen(imageHaar2,path2,j);
+                guardaimagen(imageHaar3, path3, k);
+                i++;
+                j++;
+                k++; 
+            }
+
+            imageClassifier1.Source = imagetoWriteablebitmap(imageHaar1);
+            imageClassifier2.Source = imagetoWriteablebitmap(imageHaar2);
+            imageClassifier3.Source = imagetoWriteablebitmap(imageHaar3); 
+        } //fin CompositionTarget_Rendering()  
+
+
+        private Image<Gray, Byte> PollDepth() 
+        {
             if (this.Kinect != null)
             {
-                DepthImageStream DepthStream = this.Kinect.DepthStream;
-                //this.DepthImagenBitmap = new WriteableBitmap(DepthStream.FrameWidth, DepthStream.FrameHeight, 96, 96, PixelFormats.Bgr32, null);
-                //this.DepthImagenRect = new Int32Rect(0, 0, DepthStream.FrameWidth, DepthStream.FrameHeight);
-                //this.DepthImagenStride = DepthStream.FrameWidth * 4;
+                this.DepthStream =  this.Kinect.DepthStream;
                 this.DepthValoresStream = new short[DepthStream.FramePixelDataLength];
-                this.DepthImagenPixeles = new byte[DepthStream.FramePixelDataLength * 4];
+                this.DepthImagenPixeles = new byte[DepthStream.FramePixelDataLength];
                 this.depthFrameKinect = new Image<Gray,Byte>(DepthStream.FrameWidth,DepthStream.FrameHeight);
 
                 try
@@ -110,27 +148,20 @@ namespace Checkout3Classifiers
                                 if (valorDistancia == this.Kinect.DepthStream.UnknownDepth)
                                 {
                                     DepthImagenPixeles[index] = 0;
-                                    DepthImagenPixeles[index + 1] = 0;
-                                    DepthImagenPixeles[index + 2] = 0;
                                 }
                                 else if (valorDistancia == this.Kinect.DepthStream.TooFarDepth)
                                 {
                                     DepthImagenPixeles[index] = 0;
-                                    DepthImagenPixeles[index + 1] = 0;
-                                    DepthImagenPixeles[index + 2] = 0;
                                 }
                                 else
                                 {
                                     byte byteDistancia = (byte)(255 - (valorDistancia >> 5));
                                     DepthImagenPixeles[index] = byteDistancia;
-                                    DepthImagenPixeles[index + 1] = byteDistancia;
-                                    DepthImagenPixeles[index + 2] = byteDistancia;
                                 }
-                                index = index + 4;
+                                index++; //= index + 4;
                             }
 
-                            depthFrameKinect.Bytes = DepthImagenPixeles; 
-                            //this.DepthImagenBitmap.WritePixels(this.DepthImagenRect, this.DepthImagenPixeles, this.DepthImagenStride, 0);
+                            depthFrameKinect.Bytes = DepthImagenPixeles; //The bytes are converted to a Imagen(Emgu). This to work with the functions of opencv. 
                         }
                     }
                 }
@@ -138,17 +169,59 @@ namespace Checkout3Classifiers
                 {
                     MessageBox.Show("No se pueden leer los datos del sensor", "Error");
                 }
+            }  
 
-            }
-
-
+            return depthFrameKinect; 
         }//fin PollDepth()
 
+        
+        //:::::::::::::Fin de los metodos para manipular los datos del Kinect::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+        //:::::::::::::Methods to do the detection, using haar features and cascade trining, the classifiers already trained::::::::::::
+
+        private Image<Gray,Byte> Detection(CascadeClassifier haar, Image<Gray,Byte> frameDepth)
+        {
+            if (frameDepth != null)
+            {
+                System.Drawing.Rectangle[] hands = haar.DetectMultiScale(frameDepth, 1.4, 0, new System.Drawing.Size(frameDepth.Width / 8, frameDepth.Height / 8), new System.Drawing.Size(frameDepth.Width / 3, frameDepth.Height / 3));
+
+                foreach (System.Drawing.Rectangle roi in hands)
+                {
+                    Gray colorcillo = new Gray(double.MaxValue);
+                    frameDepth.Draw(roi, colorcillo, 3);
+                }    
+            }
+
+            return frameDepth; 
+        }//finaliza detection()
+
+
+        //:::::::::::::Method to convert a byte[] to a writeablebitmap::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        private WriteableBitmap imagetoWriteablebitmap(Image<Gray,Byte> frameHand)
+        {   
+            byte[] imagenPixels = new byte[DepthStream.FrameWidth*DepthStream.FrameHeight];  
+
+            this.ImagenWriteablebitmap = new WriteableBitmap(DepthStream.FrameWidth, DepthStream.FrameHeight, 96, 96, PixelFormats.Gray8, null);
+            this.WriteablebitmapRect  = new Int32Rect(0, 0, DepthStream.FrameWidth, DepthStream.FrameHeight);
+            this.WriteablebitmapStride = DepthStream.FrameWidth;
+
+            imagenPixels = frameHand.Bytes; 
+            ImagenWriteablebitmap.WritePixels(WriteablebitmapRect, imagenPixels, WriteablebitmapStride, 0);
+            
+            return ImagenWriteablebitmap;
+        }//end 
+        
+        
+        //:::::::::::::Method to saves the images with tha detection ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+        private void guardaimagen(Image<Gray, Byte> imagen,string path,int i)
+        {
+            imagen.Save(path + i.ToString() + ".png");   
+        }
+        //::::::::::::Method to stop de Kinect:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         private void Window_Unloaded(object sender, RoutedEventArgs e)
         {
             Kinect.Stop(); 
         }//end unloaded window 
-        //:::::::::::::Fin de los metodos para manipular los datos del Kinect:::::::::::::::::::::::::::::
 
 
 
