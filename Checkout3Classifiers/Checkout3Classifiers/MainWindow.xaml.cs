@@ -43,9 +43,9 @@ namespace Checkout3Classifiers
         private string path1 = @"C:\imagenesClassifiers\Primero\";
         private string path2 = @"C:\imagenesClassifiers\Test\";
         private string path3 = @"C:\imagenesClassifiers\TestResize\"; 
-        int i = 0;
-        int j = 0;
-        int k = 0;
+        int i = 20;
+        int j = 20;
+        int k = 20;
         //:::::::::::::fin variables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -94,20 +94,27 @@ namespace Checkout3Classifiers
 
         private void CompositionTarget_Rendering(object sender, EventArgs e)
         {
+            Image<Gray, Byte> imagenClasificar; 
             Image<Gray, Byte> imageHaar1;
             Image<Gray, Byte> imageHaar2;
             Image<Gray, Byte> imageHaar3;
             
-
             EncuentraInicializaKinect();
-            imageHaar1 = PollDepth();
-            imageHaar2 = PollDepth();
-            imageHaar3 = PollDepth(); 
-            imageHaar1 = Detection(haar1, imageHaar1);
-            imageHaar2 = Detection(haar2, imageHaar2);
-            imageHaar3 = Detection(haar3, imageHaar3);
+            imagenClasificar = PollDepth();
+            
+            //Call detection an save the image with the result of the classifier.
+            imageHaar1 = Detection(haar1, imagenClasificar);
+            imageHaar2 = Detection(haar2, imagenClasificar);
+            imageHaar3 = Detection(haar3, imagenClasificar); 
 
-            if (i < 100)
+            //Display the result of the classifier, so the bytes of the imagen
+            //are converted in a wriablebitmap.  
+            imageClassifier1.Source = imagetoWriteablebitmap(imageHaar1);
+            imageClassifier2.Source = imagetoWriteablebitmap(imageHaar2);
+            imageClassifier3.Source = imagetoWriteablebitmap(imageHaar3); 
+            
+
+            if (i < 70)
             {
                 guardaimagen(imageHaar1, path1, i);
                 guardaimagen(imageHaar2,path2,j);
@@ -117,9 +124,7 @@ namespace Checkout3Classifiers
                 k++; 
             }
 
-            imageClassifier1.Source = imagetoWriteablebitmap(imageHaar1);
-            imageClassifier2.Source = imagetoWriteablebitmap(imageHaar2);
-            imageClassifier3.Source = imagetoWriteablebitmap(imageHaar3); 
+            
         } //fin CompositionTarget_Rendering()  
 
 
@@ -179,10 +184,10 @@ namespace Checkout3Classifiers
         //:::::::::::::Methods to do the detection, using haar features and cascade trining, the classifiers already trained::::::::::::
 
         private Image<Gray,Byte> Detection(CascadeClassifier haar, Image<Gray,Byte> frameDepth)
-        {
+        {  
             if (frameDepth != null)
             {
-                System.Drawing.Rectangle[] hands = haar.DetectMultiScale(frameDepth, 1.4, 0, new System.Drawing.Size(frameDepth.Width / 8, frameDepth.Height / 8), new System.Drawing.Size(frameDepth.Width / 3, frameDepth.Height / 3));
+                System.Drawing.Rectangle[] hands = haar.DetectMultiScale(frameDepth, 1.4, 0, new System.Drawing.Size(frameDepth.Width / 9, frameDepth.Height / 9), new System.Drawing.Size(frameDepth.Width / 4, frameDepth.Height /4 ));
 
                 foreach (System.Drawing.Rectangle roi in hands)
                 {
@@ -217,12 +222,12 @@ namespace Checkout3Classifiers
         {
             imagen.Save(path + i.ToString() + ".png");   
         }
+
         //::::::::::::Method to stop de Kinect:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         private void Window_Unloaded(object sender, RoutedEventArgs e)
         {
             Kinect.Stop(); 
-        }//end unloaded window 
-
+        }
 
 
     }//end class
