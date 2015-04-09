@@ -37,3 +37,4 @@ C:\Users\America\Documents\opencv-haar-clasisifier-training\DetectionNoiseRemove
 C:\Users\America\Documents\opencv-haar-clasisifier-training\DetectionNoiseRemove\DetectionNoiseRemove\obj\x86\Debug\DetectionNoiseRemove.csproj.GenerateResource.Cache
 C:\Users\America\Documents\opencv-haar-clasisifier-training\DetectionNoiseRemove\DetectionNoiseRemove\obj\x86\Debug\DetectionNoiseRemove.exe
 C:\Users\America\Documents\opencv-haar-clasisifier-training\DetectionNoiseRemove\DetectionNoiseRemove\obj\x86\Debug\DetectionNoiseRemove.pdb
+C:\Users\America\Documents\opencv-haar-clasisifier-training\DetectionNoiseRemove\DetectionNoiseRemove\obj\x86\Debug\DetectionNoiseRemove.csprojResolveAssemblyReference.cache

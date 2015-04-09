@@ -38,13 +38,29 @@ namespace DetectionNoiseRemove
         private short[] DepthValoresStream;
         private Image<Gray, Byte> depthFrameKinect;
         private CascadeClassifier haar1;
-        //private CascadeClassifier haar2;
-        //private CascadeClassifier haar3;
-        private string path1 = @"C:\imagenClassifiersWitoutNoise\Noise\";
-        private string path2 = @"C:\imagenClassifiersWitoutNoise\NoNoise\";
+        //dos manos fondo complicado no iluminacion 
+        private string path1 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\twoHand\Noise\";
+        private string path2 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\twoHand\NoNoise\3\";
+        private string path3 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\twoHand\NoNoise\5\";
+        private string path4 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\twoHand\NoNoise\7\";
+
+        //private string path1 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\oneHand\Noise\";
+        //private string path2 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\oneHand\NoNoise\3\";
+        //private string path3 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\oneHand\NoNoise\5\";
+        //private string path4 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\oneHand\NoNoise\7\";
+
+        //private string path1 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\oneHand\Noise\";
+        //private string path2 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\oneHand\NoNoise\3\";
+        //private string path3 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\oneHand\NoNoise\5\";
+        //private string path4 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\oneHand\NoNoise\7\";
+
+        //private string path1 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\twoHand\Noise\";
+        //private string path2 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\twoHand\NoNoise\3\";
+        //private string path3 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\twoHand\NoNoise\5\";
+        //private string path4 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\twoHand\NoNoise\7\";
+
         int i = 20;
         int j = 20;
-        //int k = 20;
         //:::::::::::::fin variables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -60,8 +76,6 @@ namespace DetectionNoiseRemove
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             haar1 = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml"); //La compu de escritorio
-            //haar2 = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\Mas Clasificadores\test\classifier\cascade.xml");
-            //haar3 = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\Mas Clasificadores\test_resize\classifier\cascade.xml");
 
             EncuentraInicializaKinect();
             CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);
@@ -95,32 +109,40 @@ namespace DetectionNoiseRemove
         {
             Image<Gray, Byte> imagenClasificar;
             Image<Gray, Byte> imageHaar1;
-            Image<Gray, Byte> imageMedianF;
-            Image<Gray, Byte> imageHaar1NoNoise;
+            Image<Gray, Byte> imageMedianF3;
+            Image<Gray, Byte> imageMedianF5;
+            Image<Gray, Byte> imageMedianF7;
+            Image<Gray, Byte> imageHaar1NoNoise3;
+            Image<Gray, Byte> imageHaar1NoNoise5;
+            Image<Gray, Byte> imageHaar1NoNoise7;
 
             imagenClasificar = PollDepth();
 
-            imageMedianF = removeNoise(imagenClasificar); 
+            imageMedianF3 = removeNoise(imagenClasificar, 3);
+            imageMedianF5 = removeNoise(imagenClasificar, 5);
+            imageMedianF7 = removeNoise(imagenClasificar, 7); 
 
             //Call detection an save the image with the result of the classifier.
             imageHaar1 = Detection(haar1, imagenClasificar);
-            imageHaar1NoNoise = Detection(haar1, imageMedianF); 
-            //imageHaar2 = Detection(haar2, imagenClasificar);
-            //imageHaar3 = Detection(haar3, imagenClasificar);
+            imageHaar1NoNoise3 = Detection(haar1, imageMedianF3);
+            imageHaar1NoNoise5 = Detection(haar1, imageMedianF5);
+            imageHaar1NoNoise7 = Detection(haar1, imageMedianF7); 
+
 
             //Display the result of the classifier, so the bytes of the imagen
             //are converted in a wriablebitmap.  
             imageKinect.Source = imagetoWriteablebitmap(imageHaar1);
-            imageMedianFilter.Source = imagetoWriteablebitmap(imageHaar1NoNoise); 
+            imageMedianFilter.Source = imagetoWriteablebitmap(imageHaar1NoNoise3); 
 
             if (i < 70)
             {
                 guardaimagen(imageHaar1, path1, i);
-                guardaimagen(imageHaar1NoNoise, path2, j);
-                //guardaimagen(imageHaar3, path3, k);
+                guardaimagen(imageHaar1NoNoise3, path2, j);
+                guardaimagen(imageHaar1NoNoise5, path3, j);
+                guardaimagen(imageHaar1NoNoise7, path4, j);
+
                 i++;
                 j++;
-                //k++;
             }
 
 
@@ -216,11 +238,11 @@ namespace DetectionNoiseRemove
 
 
         //::::::::::::Method to remove the noise, using median filters::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-        private Image<Gray, Byte> removeNoise(Image<Gray, Byte> imagenKinet)
+        private Image<Gray, Byte> removeNoise(Image<Gray, Byte> imagenKinet,int sizeWindow)
         {
             Image<Gray, Byte> imagenSinRuido;
 
-            imagenSinRuido = imagenKinet.SmoothMedian(7);
+            imagenSinRuido = imagenKinet.SmoothMedian(sizeWindow);
 
             return imagenSinRuido; 
         }//endremoveNoise 

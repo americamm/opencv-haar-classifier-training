@@ -40,9 +40,22 @@ namespace Checkout3Classifiers
         private CascadeClassifier haar1;
         private CascadeClassifier haar2;
         private CascadeClassifier haar3;
-        private string path1 = @"C:\imagenesClassifiers\Primero\";
-        private string path2 = @"C:\imagenesClassifiers\Test\";
-        private string path3 = @"C:\imagenesClassifiers\TestResize\"; 
+        private string path1 = @"C:\imagenesClassifiers\Primero\BackgroudSimple\Iluminacion\dosmanos";
+        private string path2 = @"C:\imagenesClassifiers\Test\BackgroudSimple\Iluminacion\dosmanos";
+        private string path3 = @"C:\imagenesClassifiers\TestResize\BackgroudSimple\Iluminacion\dosmanos";
+
+        //private string path1 = @"C:\imagenesClassifiers\Primero\BackgroudSimple\Iluminacion\unamano";
+        //private string path2 = @"C:\imagenesClassifiers\Test\BackgroudSimple\Iluminacion\unamano";
+        //private string path3 = @"C:\imagenesClassifiers\TestResize\BackgroudSimple\Iluminacion\unamano";
+
+        //private string path1 = @"C:\imagenesClassifiers\Primero\BackgroudSimple\NoIluminacion\unamano";
+        //private string path2 = @"C:\imagenesClassifiers\Test\BackgroudSimple\NoIluminacion\unamano";
+        //private string path3 = @"C:\imagenesClassifiers\TestResize\BackgroudSimple\NoIluminacion\unamano";
+
+        //private string path1 = @"C:\imagenesClassifiers\Primero\BackgroudSimple\NoIluminacion\dosmanos";
+        //private string path2 = @"C:\imagenesClassifiers\Test\BackgroudSimple\NoIluminacion\dosmanos";
+        //private string path3 = @"C:\imagenesClassifiers\TestResize\BackgroudSimple\NoIluminacion\dosmanos"; 
+
         int i = 20;
         int j = 20;
         int k = 20;
