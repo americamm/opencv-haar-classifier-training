@@ -1,9 +1,17 @@
 ﻿<Window x:Class="DetectionNoiseRemove.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Detection with noise remove" Height="350" Width="525" Loaded="Window_Loaded">
+        Title="Detection with noise remove" Height="574" Width="927" Loaded="Window_Loaded">
     <Grid>
-        <Image Height="246" HorizontalAlignment="Left" Margin="12,45,0,0" Name="imageKinect" Stretch="Fill" VerticalAlignment="Top" Width="219" />
-        <Image Height="248" HorizontalAlignment="Left" Margin="275,43,0,0" Name="imageMedianFilter" Stretch="Fill" VerticalAlignment="Top" Width="208" />
+        <Image Height="308" HorizontalAlignment="Left" Margin="24,110,0,0" Name="imageKinect" Stretch="Fill" VerticalAlignment="Top" Width="292" />
+        <Image Height="308" HorizontalAlignment="Left" Margin="368,110,0,0" Name="imageMedianFilter" Stretch="Fill" VerticalAlignment="Top" Width="286" />
+        <CheckBox Content="Iluminación" Height="22" HorizontalAlignment="Left" IsEnabled="True" Margin="185,29,0,0" Name="iluminacion" VerticalAlignment="Top" Width="131" Checked="iluminacion_Checked" />
+        <CheckBox Content="No iluminación" Height="21" HorizontalAlignment="Right" IsEnabled="True" Margin="0,29,386,0" Name="noiluminacion" VerticalAlignment="Top" Width="142" Checked="noiluminacion_Checked" />
+        <Label Content="Obtener Imágenes:" FontWeight="Bold" Height="29" HorizontalAlignment="Left" Margin="12,23,0,0" Name="label1" VerticalAlignment="Top" Width="131" />
+        <CheckBox Content="Mover ángulo del kinect" Height="19" HorizontalAlignment="Right" Margin="0,474,48,0" Name="moverKinect" VerticalAlignment="Top" Width="170" Checked="moverKinect_Checked" />
+        <Slider Height="336" HorizontalAlignment="Left" IsEnabled="False" Margin="748,110,0,0" Maximum="27" Minimum="-27" Name="anguloSlider" Orientation="Vertical" SmallChange="1" TickPlacement="Both" VerticalAlignment="Top" Width="55" ValueChanged="anguloSlider_ValueChanged" />
+        <Button Content="Grabar" Height="40" HorizontalAlignment="Left" Margin="687,25,0,0" Name="botonGrabar" VerticalAlignment="Top" Width="144" Click="botonGrabar_Click" />
+        <CheckBox Content="Dos manos" Height="30" HorizontalAlignment="Left" Margin="377,64,0,0" Name="dosManos" VerticalAlignment="Top" Width="126" Checked="dosManos_Checked" IsEnabled="False" />
+        <CheckBox Content="Una mano" Height="25" HorizontalAlignment="Left" Margin="185,64,0,0" Name="unaMano" VerticalAlignment="Top" Width="103" Checked="unaMano_Checked" IsEnabled="False" />
     </Grid>
 </Window>

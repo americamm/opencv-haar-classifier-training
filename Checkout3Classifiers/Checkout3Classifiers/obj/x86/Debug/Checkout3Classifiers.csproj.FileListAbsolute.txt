@@ -37,3 +37,5 @@ C:\Users\America\Documents\opencv-haar-clasisifier-training\Checkout3Classifiers
 C:\Users\America\Documents\opencv-haar-clasisifier-training\Checkout3Classifiers\Checkout3Classifiers\obj\x86\Debug\Checkout3Classifiers.exe
 C:\Users\America\Documents\opencv-haar-clasisifier-training\Checkout3Classifiers\Checkout3Classifiers\obj\x86\Debug\Checkout3Classifiers.pdb
 C:\Users\America\Documents\opencv-haar-clasisifier-training\Checkout3Classifiers\Checkout3Classifiers\obj\x86\Debug\Checkout3Classifiers.csprojResolveAssemblyReference.cache
+C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\Checkout3Classifiers\Checkout3Classifiers\obj\x86\Debug\Checkout3Classifiers.exe
+C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\Checkout3Classifiers\Checkout3Classifiers\obj\x86\Debug\Checkout3Classifiers.pdb

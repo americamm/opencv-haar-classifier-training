@@ -28,7 +28,7 @@ namespace DetectionNoiseRemove
     /// </summary>
     public partial class MainWindow : Window
     {
-        //::::::::::::::Variables:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        //::::::::::::::Variables:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         private KinectSensor Kinect;
         private WriteableBitmap ImagenWriteablebitmap;
         private Int32Rect WriteablebitmapRect;
@@ -38,33 +38,17 @@ namespace DetectionNoiseRemove
         private short[] DepthValoresStream;
         private Image<Gray, Byte> depthFrameKinect;
         private CascadeClassifier haar1;
-        //dos manos fondo complicado no iluminacion 
-        private string path1 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\twoHand\Noise\";
-        private string path2 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\twoHand\NoNoise\3\";
-        private string path3 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\twoHand\NoNoise\5\";
-        private string path4 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\twoHand\NoNoise\7\";
-
-        //private string path1 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\oneHand\Noise\";
-        //private string path2 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\oneHand\NoNoise\3\";
-        //private string path3 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\oneHand\NoNoise\5\";
-        //private string path4 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\Ilumination\oneHand\NoNoise\7\";
-
-        //private string path1 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\oneHand\Noise\";
-        //private string path2 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\oneHand\NoNoise\3\";
-        //private string path3 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\oneHand\NoNoise\5\";
-        //private string path4 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\oneHand\NoNoise\7\";
-
-        //private string path1 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\twoHand\Noise\";
-        //private string path2 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\twoHand\NoNoise\3\";
-        //private string path3 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\twoHand\NoNoise\5\";
-        //private string path4 = @"C:\imagenClassifiersWitoutNoise\BackgroundSimple\NoIlumination\twoHand\NoNoise\7\";
-
-        int i = 20;
-        int j = 20;
-        //:::::::::::::fin variables::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        private bool moverK = false;
+        private bool grabar = false;
+        private string path; 
+        private int index;
+        private int numeroGrabaciones = 50;
+        private string numeroManos;
+        private string tipoIluminacion;
+        //:::::::::::::fin variables:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-        //:::::::::::::Constructor:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        //:::::::::::::Constructor:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         public MainWindow()
         {
             InitializeComponent();
@@ -72,18 +56,18 @@ namespace DetectionNoiseRemove
         //:::::::::::::Fin Constructor:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-        //:::::::::::::Call Methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        //:::::::::::::Call Methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            haar1 = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-clasisifier-training\classifier\cascade.xml"); //La compu de escritorio
-
+            haar1 = new CascadeClassifier(@"C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\classifier\cascade.xml"); //La compu de escritorio
+            
             EncuentraInicializaKinect();
             CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);
         }
-        //:::::::::::::end event::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        //:::::::::::::end event:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-        //:::::::::::::Enseguida estan los metodos para desplegar los datos de profundidad de Kinect:::::::::::::::::::::::::::::::
+        //:::::::::::::Enseguida estan los metodos para desplegar los datos de profundidad de Kinect:::::::::::::::::::::::::::::::::::
         private void EncuentraInicializaKinect()
         {
             Kinect = KinectSensor.KinectSensors.FirstOrDefault();
@@ -110,42 +94,51 @@ namespace DetectionNoiseRemove
             Image<Gray, Byte> imagenClasificar;
             Image<Gray, Byte> imageHaar1;
             Image<Gray, Byte> imageMedianF3;
-            Image<Gray, Byte> imageMedianF5;
-            Image<Gray, Byte> imageMedianF7;
+            //Image<Gray, Byte> imageMedianF5;
+            //Image<Gray, Byte> imageMedianF7;
             Image<Gray, Byte> imageHaar1NoNoise3;
-            Image<Gray, Byte> imageHaar1NoNoise5;
-            Image<Gray, Byte> imageHaar1NoNoise7;
+            //Image<Gray, Byte> imageHaar1NoNoise5;
+            //Image<Gray, Byte> imageHaar1NoNoise7;
 
             imagenClasificar = PollDepth();
 
             imageMedianF3 = removeNoise(imagenClasificar, 3);
-            imageMedianF5 = removeNoise(imagenClasificar, 5);
-            imageMedianF7 = removeNoise(imagenClasificar, 7); 
+            //imageMedianF5 = removeNoise(imagenClasificar, 5);
+            //imageMedianF7 = removeNoise(imagenClasificar, 7); 
 
             //Call detection an save the image with the result of the classifier.
             imageHaar1 = Detection(haar1, imagenClasificar);
             imageHaar1NoNoise3 = Detection(haar1, imageMedianF3);
-            imageHaar1NoNoise5 = Detection(haar1, imageMedianF5);
-            imageHaar1NoNoise7 = Detection(haar1, imageMedianF7); 
-
+            //imageHaar1NoNoise5 = Detection(haar1, imageMedianF5);
+            //imageHaar1NoNoise7 = Detection(haar1, imageMedianF7); 
 
             //Display the result of the classifier, so the bytes of the imagen
             //are converted in a wriablebitmap.  
             imageKinect.Source = imagetoWriteablebitmap(imageHaar1);
             imageMedianFilter.Source = imagetoWriteablebitmap(imageHaar1NoNoise3); 
 
-            if (i < 70)
+            if ((index < (numeroGrabaciones)) && grabar )
             {
-                guardaimagen(imageHaar1, path1, i);
-                guardaimagen(imageHaar1NoNoise3, path2, j);
-                guardaimagen(imageHaar1NoNoise5, path3, j);
-                guardaimagen(imageHaar1NoNoise7, path4, j);
-
-                i++;
-                j++;
+                guardaimagen(imageHaar1, path, index,"Noise");
+                guardaimagen(imageHaar1NoNoise3, path, index, "noNoise");
+                //guardaimagen(imageHaar1NoNoise5, path, j-start);
+                //guardaimagen(imageHaar1NoNoise7, path, j-start);
+                index++;
             }
 
+            if (index == numeroGrabaciones)
+            {
+                /*iluminacion.IsChecked = false;
+                noiluminacion.IsChecked = false;
+                unaMano.IsChecked = false;
+                dosManos.IsChecked = false;*/
 
+                iluminacion.IsEnabled = true;
+                noiluminacion.IsEnabled = true;
+                //unaMano.IsEnabled = false;
+                //dosManos.IsEnabled = false;
+            }
+            
         } //fin CompositionTarget_Rendering()  
 
 
@@ -250,9 +243,10 @@ namespace DetectionNoiseRemove
 
         //:::::::::::::Method to saves the images with tha detection ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-        private void guardaimagen(Image<Gray, Byte> imagen, string path, int i)
+        private void guardaimagen(Image<Gray, Byte> imagen, string path, int i, string ruido)
         {
-            imagen.Save(path + i.ToString() + ".png");
+            //path ejemplo "C:\imagenClassifiersWitoutNoise\Ilumination\twoHands\Noise\";
+            imagen.Save(path + ruido + @"\" + i.ToString() + ".png");
         }
 
         //::::::::::::Method to stop de Kinect:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -261,7 +255,55 @@ namespace DetectionNoiseRemove
             Kinect.Stop();
         }
 
+        private void moverKinect_Checked(object sender, RoutedEventArgs e)
+        {
+            moverK = true;
+            anguloSlider.Value = (double)Kinect.ElevationAngle;
+            anguloSlider.IsEnabled = true;
+        }
 
+        private void anguloSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (moverK)
+                Kinect.ElevationAngle = (int)anguloSlider.Value;
+        }
+
+        private void iluminacion_Checked(object sender, RoutedEventArgs e)
+        {  
+            tipoIluminacion="Ilumination";
+            
+            noiluminacion.IsEnabled = false;
+            unaMano.IsEnabled = true;
+            dosManos.IsEnabled = true; 
+        }
+
+        private void noiluminacion_Checked(object sender, RoutedEventArgs e)
+        {
+            tipoIluminacion = "noIlumination";  
+            
+            iluminacion.IsEnabled = false;
+            unaMano.IsEnabled = true;
+            dosManos.IsEnabled = true; 
+        }
+
+        private void botonGrabar_Click(object sender, RoutedEventArgs e)
+        {  
+            path = @"C:\imagenClassifierWitoutNoise\"+ tipoIluminacion+ @"\"+ numeroManos+ @"\"; 
+            grabar = true;
+            index = 0; 
+        }
+
+        private void unaMano_Checked(object sender, RoutedEventArgs e)
+        {  
+            numeroManos = "1";
+            dosManos.IsEnabled = false; 
+        }
+
+        private void dosManos_Checked(object sender, RoutedEventArgs e)
+        {
+            numeroManos = "2";
+            unaMano.IsEnabled = false; 
+        }
 
     }//end class
 }//end namespace
