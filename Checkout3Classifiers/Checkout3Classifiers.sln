@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout3Classifiers", "Checkout3Classifiers\Checkout3Classifiers.csproj", "{84C122E8-957E-4FCB-A1D8-DB4F2D1AF8CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84C122E8-957E-4FCB-A1D8-DB4F2D1AF8CA}.Debug|x86.ActiveCfg = Debug|x86
+		{84C122E8-957E-4FCB-A1D8-DB4F2D1AF8CA}.Debug|x86.Build.0 = Debug|x86
+		{84C122E8-957E-4FCB-A1D8-DB4F2D1AF8CA}.Release|x86.ActiveCfg = Release|x86
+		{84C122E8-957E-4FCB-A1D8-DB4F2D1AF8CA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
