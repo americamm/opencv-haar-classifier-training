@@ -1,0 +1,850 @@
+./negative_images/cuarto31.png
+./negative_images/cuartoside10 1.png
+./negative_images/cubootherside12.png
+./negative_images/nada15.png
+./negative_images/cuarto19 1.png
+./negative_images/cubome46.png
+./negative_images/simpleclaro13.png
+./negative_images/cubootherside9.png
+./negative_images/cuboside10.png
+./negative_images/simpleesquina2.png
+./negative_images/cuboentrada48.png
+./negative_images/cuboatras18.png
+./negative_images/cuartoside0 1.png
+./negative_images/cuboentrada19.png
+./negative_images/simpleesquina28.png
+./negative_images/nada17.png
+./negative_images/simpleesquina47.png
+./negative_images/cubootherside23.png
+./negative_images/cubo11.png
+./negative_images/cubome35.png
+./negative_images/cuboatras30.png
+./negative_images/simpleesquina36.png
+./negative_images/simpleclaro26.png
+./negative_images/cubootherside36.png
+./negative_images/cuboside42.png
+./negative_images/simpleesquina42.png
+./negative_images/simpleclaro29.png
+./negative_images/cuboentrada10.png
+./negative_images/sala43.png
+./negative_images/nada34 1.png
+./negative_images/sala26.png
+./negative_images/nada14.png
+./negative_images/stuffcerca47.png
+./negative_images/cubome11.png
+./negative_images/cuartoside14 1.png
+./negative_images/cuboentrada23.png
+./negative_images/cubo14.png
+./negative_images/cuboentrada41.png
+./negative_images/stuffcerca7.png
+./negative_images/sala47.png
+./negative_images/simpleesquina16.png
+./negative_images/cubome25.png
+./negative_images/cuartoside26.png
+./negative_images/cubome20.png
+./negative_images/cuboentrada6.png
+./negative_images/simpleesquina9.png
+./negative_images/simpleesquina10.png
+./negative_images/sala1.png
+./negative_images/sala24.png
+./negative_images/cuartoside5 1.png
+./negative_images/cuarto6.png
+./negative_images/simpleesquina24.png
+./negative_images/nada39.png
+./negative_images/cocina16.png
+./negative_images/stuffcerca12.png
+./negative_images/cuartoside13 1.png
+./negative_images/cuarto8 1.png
+./negative_images/stuffcerca10.png
+./negative_images/cubootherside28.png
+./negative_images/cuartoside26 1.png
+./negative_images/cuartoside32.png
+./negative_images/cubootherside47.png
+./negative_images/cuboentrada17.png
+./negative_images/cubome32.png
+./negative_images/cuboside2.png
+./negative_images/cuarto9 1.png
+./negative_images/cocina40.png
+./negative_images/simpleesquina43.png
+./negative_images/cuboside29.png
+./negative_images/simpleclaro44.png
+./negative_images/cubo10.png
+./negative_images/cuboentrada9.png
+./negative_images/cuboentrada27.png
+./negative_images/simpleesquina12.png
+./negative_images/cubo16.png
+./negative_images/nada41 1.png
+./negative_images/cubome36.png
+./negative_images/sala42.png
+./negative_images/cuarto43.png
+./negative_images/cubo28.png
+./negative_images/nada36.png
+./negative_images/nada30.png
+./negative_images/simpleesquina13.png
+./negative_images/cocina28.png
+./negative_images/cubootherside37.png
+./negative_images/cubootherside46.png
+./negative_images/cuarto45.png
+./negative_images/simpleclaro14.png
+./negative_images/cuartoside47 1.png
+./negative_images/stuffcerca2.png
+./negative_images/cubo29.png
+./negative_images/nada48 1.png
+./negative_images/cuboentrada25.png
+./negative_images/simpleesquina30.png
+./negative_images/cuartoside41.png
+./negative_images/simpleesquina49.png
+./negative_images/cuarto7 1.png
+./negative_images/cubo1.png
+./negative_images/cubome14.png
+./negative_images/simpleesquina33.png
+./negative_images/nada17 1.png
+./negative_images/nada20 1.png
+./negative_images/simpleesquina29.png
+./negative_images/stuffcerca48.png
+./negative_images/simpleesquina39.png
+./negative_images/nada10.png
+./negative_images/cuartoside11.png
+./negative_images/cuartoside33 1.png
+./negative_images/simpleclaro40.png
+./negative_images/cubo19.png
+./negative_images/cubome45.png
+./negative_images/nada8.png
+./negative_images/cuboatras4.png
+./negative_images/cuartoside9.png
+./negative_images/nada19.png
+./negative_images/cuboside28.png
+./negative_images/cuarto26.png
+./negative_images/cubootherside15.png
+./negative_images/nada3.png
+./negative_images/cubootherside42.png
+./negative_images/nada33.png
+./negative_images/simpleclaro1.png
+./negative_images/simpleesquina7.png
+./negative_images/cuarto22 1.png
+./negative_images/cubome42.png
+./negative_images/cubo36.png
+./negative_images/cubootherside39.png
+./negative_images/cuartoside44.png
+./negative_images/cubootherside11.png
+./negative_images/cuboside0.png
+./negative_images/cubootherside22.png
+./negative_images/stuffcerca6.png
+./negative_images/cubome13.png
+./negative_images/cuboatras28.png
+./negative_images/sala33.png
+./negative_images/cubootherside6.png
+./negative_images/cuarto23.png
+./negative_images/simpleesquina3.png
+./negative_images/nada40.png
+./negative_images/stuffcerca3.png
+./negative_images/cocina19.png
+./negative_images/cuartoside15 1.png
+./negative_images/cocina29.png
+./negative_images/nada33 1.png
+./negative_images/cuartoside38 1.png
+./negative_images/cubome34.png
+./negative_images/cuarto24.png
+./negative_images/simpleclaro17.png
+./negative_images/sala29.png
+./negative_images/simpleesquina19.png
+./negative_images/cocina2.png
+./negative_images/stuffcerca0.png
+./negative_images/cocina30.png
+./negative_images/cubo24.png
+./negative_images/cuartoside14.png
+./negative_images/nada44.png
+./negative_images/simpleclaro31.png
+./negative_images/cuarto19.png
+./negative_images/cuboatras41.png
+./negative_images/nada10 1.png
+./negative_images/simpleclaro45.png
+./negative_images/cubootherside17.png
+./negative_images/cocina33.png
+./negative_images/nada3 1.png
+./negative_images/sala48.png
+./negative_images/cubo26.png
+./negative_images/cuboside33.png
+./negative_images/simpleesquina32.png
+./negative_images/simpleclaro8.png
+./negative_images/cubo12.png
+./negative_images/cocina22.png
+./negative_images/stuffcerca37.png
+./negative_images/cuboside40.png
+./negative_images/cuartoside12 1.png
+./negative_images/cuarto14.png
+./negative_images/cuarto20 1.png
+./negative_images/cuboside26.png
+./negative_images/stuffcerca16.png
+./negative_images/cuartoside16 1.png
+./negative_images/simpleclaro18.png
+./negative_images/cuartoside7.png
+./negative_images/cuboside43.png
+./negative_images/cuartoside36 1.png
+./negative_images/cubo38.png
+./negative_images/cocina45.png
+./negative_images/nada22 1.png
+./negative_images/cuarto37.png
+./negative_images/cuartoside23.png
+./negative_images/simpleclaro22.png
+./negative_images/stuffcerca35.png
+./negative_images/cuboentrada7.png
+./negative_images/cuarto3.png
+./negative_images/cuarto47 1.png
+./negative_images/cocina21.png
+./negative_images/cocina47.png
+./negative_images/nada7.png
+./negative_images/cuboentrada24.png
+./negative_images/cubome26.png
+./negative_images/cuboatras7.png
+./negative_images/cuarto33.png
+./negative_images/cuboside5.png
+./negative_images/simpleesquina45.png
+./negative_images/nada44 1.png
+./negative_images/cuboentrada42.png
+./negative_images/cubootherside25.png
+./negative_images/stuffcerca36.png
+./negative_images/cuarto20.png
+./negative_images/nada1 1.png
+./negative_images/cuarto40 1.png
+./negative_images/cuboside27.png
+./negative_images/simpleclaro38.png
+./negative_images/cubootherside30.png
+./negative_images/cubo34.png
+./negative_images/cuarto16.png
+./negative_images/nada7 1.png
+./negative_images/cuboatras6.png
+./negative_images/cubo3.png
+./negative_images/cuarto24 1.png
+./negative_images/nada9 1.png
+./negative_images/cocina37.png
+./negative_images/cuarto27 1.png
+./negative_images/cubo43.png
+./negative_images/sala21.png
+./negative_images/cubo30.png
+./negative_images/cubo21.png
+./negative_images/cocina27.png
+./negative_images/cuboentrada37.png
+./negative_images/stuffcerca23.png
+./negative_images/nada34.png
+./negative_images/cuboside18.png
+./negative_images/sala37.png
+./negative_images/cubo45.png
+./negative_images/cocina38.png
+./negative_images/cuboatras19.png
+./negative_images/cuartoside6 1.png
+./negative_images/cubo41.png
+./negative_images/cuboatras38.png
+./negative_images/cuboentrada43.png
+./negative_images/cuartoside28.png
+./negative_images/cuarto28 1.png
+./negative_images/cubome15.png
+./negative_images/simpleesquina11.png
+./negative_images/cuarto32 1.png
+./negative_images/simpleclaro12.png
+./negative_images/nada4.png
+./negative_images/cuboentrada14.png
+./negative_images/cocina49.png
+./negative_images/cocina12.png
+./negative_images/simpleesquina44.png
+./negative_images/simpleesquina41.png
+./negative_images/nada38.png
+./negative_images/cubome23.png
+./negative_images/cuboatras40.png
+./negative_images/cubome27.png
+./negative_images/cuboside7.png
+./negative_images/stuffcerca13.png
+./negative_images/cuboatras42.png
+./negative_images/cuartoside34.png
+./negative_images/cuboatras25.png
+./negative_images/cuboentrada11.png
+./negative_images/cubootherside34.png
+./negative_images/cubo47.png
+./negative_images/stuffcerca14.png
+./negative_images/simpleclaro43.png
+./negative_images/sala2.png
+./negative_images/cuarto7.png
+./negative_images/cuboatras45.png
+./negative_images/cuarto11 1.png
+./negative_images/cocina17.png
+./negative_images/stuffcerca39.png
+./negative_images/cuboentrada32.png
+./negative_images/cuarto31 1.png
+./negative_images/simpleesquina18.png
+./negative_images/cuboatras16.png
+./negative_images/cuartoside37 1.png
+./negative_images/cubome3.png
+./negative_images/cubootherside18.png
+./negative_images/cubootherside32.png
+./negative_images/cuboentrada30.png
+./negative_images/stuffcerca33.png
+./negative_images/cuarto33 1.png
+./negative_images/simpleclaro46.png
+./negative_images/cuartoside40.png
+./negative_images/cuartoside44 1.png
+./negative_images/cocina46.png
+./negative_images/cubome28.png
+./negative_images/cuarto23 1.png
+./negative_images/cocina13.png
+./negative_images/cuarto40.png
+./negative_images/cubootherside8.png
+./negative_images/cuarto28.png
+./negative_images/cuarto26 1.png
+./negative_images/cuartoside18.png
+./negative_images/sala35.png
+./negative_images/cubome48.png
+./negative_images/sala38.png
+./negative_images/sala14.png
+./negative_images/cuartoside1 1.png
+./negative_images/simpleesquina34.png
+./negative_images/cuboside22.png
+./negative_images/cocina5.png
+./negative_images/cuboatras49.png
+./negative_images/cubome29.png
+./negative_images/nada12 1.png
+./negative_images/cuboatras21.png
+./negative_images/nada6.png
+./negative_images/simpleclaro30.png
+./negative_images/nada41.png
+./negative_images/cuartoside21 1.png
+./negative_images/simpleclaro27.png
+./negative_images/cuboside30.png
+./negative_images/cuboside16.png
+./negative_images/cuboentrada39.png
+./negative_images/cuarto10.png
+./negative_images/cuarto10 1.png
+./negative_images/cuarto0.png
+./negative_images/cuboatras14.png
+./negative_images/cuarto9.png
+./negative_images/nada32 1.png
+./negative_images/cubootherside7.png
+./negative_images/cuartoside31 1.png
+./negative_images/cubo22.png
+./negative_images/cuboentrada0.png
+./negative_images/nada0 1.png
+./negative_images/cuarto3 1.png
+./negative_images/sala15.png
+./negative_images/sala12.png
+./negative_images/simpleesquina46.png
+./negative_images/cubome49.png
+./negative_images/simpleesquina17.png
+./negative_images/cuboside31.png
+./negative_images/simpleesquina35.png
+./negative_images/cuboentrada8.png
+./negative_images/cuartoside25.png
+./negative_images/simpleesquina21.png
+./negative_images/cubome1.png
+./negative_images/cuartoside30 1.png
+./negative_images/cuboside9.png
+./negative_images/cubome33.png
+./negative_images/cubome24.png
+./negative_images/simpleclaro9.png
+./negative_images/simpleclaro16.png
+./negative_images/cubootherside19.png
+./negative_images/cuartoside36.png
+./negative_images/stuffcerca26.png
+./negative_images/simpleesquina37.png
+./negative_images/stuffcerca40.png
+./negative_images/cuboatras23.png
+./negative_images/cocina41.png
+./negative_images/cuarto18.png
+./negative_images/cuboatras27.png
+./negative_images/cuarto0 1.png
+./negative_images/cuboentrada29.png
+./negative_images/nada38 1.png
+./negative_images/cuboside15.png
+./negative_images/stuffcerca32.png
+./negative_images/cocina10.png
+./negative_images/cuarto27.png
+./negative_images/cubome21.png
+./negative_images/cuartoside49 1.png
+./negative_images/cubome40.png
+./negative_images/nada42.png
+./negative_images/cocina20.png
+./negative_images/cuartoside48 1.png
+./negative_images/cuboatras17.png
+./negative_images/nada1.png
+./negative_images/simpleesquina25.png
+./negative_images/cuartoside6.png
+./negative_images/cuartoside42.png
+./negative_images/cuartoside43 1.png
+./negative_images/cuartoside17 1.png
+./negative_images/cubo5.png
+./negative_images/cuboentrada26.png
+./negative_images/sala17.png
+./negative_images/cuartoside1.png
+./negative_images/sala11.png
+./negative_images/cocina48.png
+./negative_images/nada15 1.png
+./negative_images/cuboatras12.png
+./negative_images/cuartoside4 1.png
+./negative_images/cuboatras20.png
+./negative_images/nada46.png
+./negative_images/cocina42.png
+./negative_images/cuarto30 1.png
+./negative_images/sala6.png
+./negative_images/cuarto36 1.png
+./negative_images/cuartoside46 1.png
+./negative_images/cubootherside41.png
+./negative_images/cubome0.png
+./negative_images/cubo48.png
+./negative_images/cuboside37.png
+./negative_images/cubo44.png
+./negative_images/nada9.png
+./negative_images/cuboside36.png
+./negative_images/nada32.png
+./negative_images/simpleesquina8.png
+./negative_images/cuarto32.png
+./negative_images/sala27.png
+./negative_images/stuffcerca41.png
+./negative_images/cubo17.png
+./negative_images/cubome12.png
+./negative_images/cuartoside32 1.png
+./negative_images/stuffcerca5.png
+./negative_images/cocina14.png
+./negative_images/stuffcerca11.png
+./negative_images/stuffcerca25.png
+./negative_images/cuartoside31.png
+./negative_images/cuboentrada3.png
+./negative_images/cuboentrada40.png
+./negative_images/cuboside24.png
+./negative_images/nada27 1.png
+./negative_images/cuarto35.png
+./negative_images/stuffcerca8.png
+./negative_images/cuarto13 1.png
+./negative_images/cuartoside2 1.png
+./negative_images/cubo9.png
+./negative_images/cuboatras35.png
+./negative_images/cuartoside18 1.png
+./negative_images/cubootherside40.png
+./negative_images/stuffcerca34.png
+./negative_images/cuboatras36.png
+./negative_images/simpleclaro10.png
+./negative_images/nada27.png
+./negative_images/cuboatras13.png
+./negative_images/sala18.png
+./negative_images/cuboentrada45.png
+./negative_images/cubome22.png
+./negative_images/cubo15.png
+./negative_images/cuarto49 1.png
+./negative_images/cuarto12.png
+./negative_images/cuartoside47.png
+./negative_images/simpleclaro6.png
+./negative_images/cubo42.png
+./negative_images/cuarto46 1.png
+./negative_images/nada28.png
+./negative_images/cubo40.png
+./negative_images/cubo13.png
+./negative_images/cuarto34 1.png
+./negative_images/nada46 1.png
+./negative_images/sala40.png
+./negative_images/stuffcerca29.png
+./negative_images/cuboatras29.png
+./negative_images/cubootherside44.png
+./negative_images/cuarto29 1.png
+./negative_images/cuartoside15.png
+./negative_images/cuarto49.png
+./negative_images/cuboside41.png
+./negative_images/cuboatras33.png
+./negative_images/cuboentrada36.png
+./negative_images/sala7.png
+./negative_images/cuboside13.png
+./negative_images/nada36 1.png
+./negative_images/sala44.png
+./negative_images/simpleesquina27.png
+./negative_images/simpleclaro36.png
+./negative_images/cuboside44.png
+./negative_images/cuboentrada28.png
+./negative_images/cuboentrada15.png
+./negative_images/cuboside11.png
+./negative_images/cuboentrada49.png
+./negative_images/simpleclaro32.png
+./negative_images/cubootherside0.png
+./negative_images/cocina35.png
+./negative_images/cubome2.png
+./negative_images/cuboatras46.png
+./negative_images/stuffcerca28.png
+./negative_images/nada45.png
+./negative_images/cubo20.png
+./negative_images/cuboside46.png
+./negative_images/cuartoside39 1.png
+./negative_images/nada16 1.png
+./negative_images/cuboatras26.png
+./negative_images/cuboentrada47.png
+./negative_images/stuffcerca46.png
+./negative_images/cuartoside13.png
+./negative_images/cuboside23.png
+./negative_images/nada25 1.png
+./negative_images/cuarto13.png
+./negative_images/stuffcerca38.png
+./negative_images/cuartoside22 1.png
+./negative_images/cuarto17 1.png
+./negative_images/cuarto48.png
+./negative_images/cocina11.png
+./negative_images/stuffcerca15.png
+./negative_images/stuffcerca30.png
+./negative_images/cubootherside24.png
+./negative_images/cubome18.png
+./negative_images/nada42 1.png
+./negative_images/cubo6.png
+./negative_images/cuboatras44.png
+./negative_images/simpleesquina48.png
+./negative_images/stuffcerca42.png
+./negative_images/nada40 1.png
+./negative_images/cuboatras3.png
+./negative_images/cubo31.png
+./negative_images/sala30.png
+./negative_images/cuboside35.png
+./negative_images/cubootherside5.png
+./negative_images/cuarto41 1.png
+./negative_images/cuarto35 1.png
+./negative_images/nada49 1.png
+./negative_images/nada2.png
+./negative_images/nada16.png
+./negative_images/cubome6.png
+./negative_images/cuboside12.png
+./negative_images/stuffcerca4.png
+./negative_images/cubootherside16.png
+./negative_images/nada35.png
+./negative_images/cuboentrada35.png
+./negative_images/simpleclaro47.png
+./negative_images/cuartoside49.png
+./negative_images/nada45 1.png
+./negative_images/cuboatras11.png
+./negative_images/cubome38.png
+./negative_images/cuarto2 1.png
+./negative_images/cuboatras9.png
+./negative_images/cuarto34.png
+./negative_images/nada21.png
+./negative_images/simpleclaro35.png
+./negative_images/stuffcerca19.png
+./negative_images/cubo49.png
+./negative_images/stuffcerca45.png
+./negative_images/cuarto43 1.png
+./negative_images/cuartoside22.png
+./negative_images/simpleclaro25.png
+./negative_images/cubo46.png
+./negative_images/cubootherside14.png
+./negative_images/cubo37.png
+./negative_images/cuarto39.png
+./negative_images/sala3.png
+./negative_images/cuboside47.png
+./negative_images/nada47 1.png
+./negative_images/nada39 1.png
+./negative_images/cubootherside48.png
+./negative_images/cubootherside49.png
+./negative_images/cuartoside20.png
+./negative_images/cubootherside45.png
+./negative_images/sala20.png
+./negative_images/nada43.png
+./negative_images/cocina4.png
+./negative_images/cubootherside3.png
+./negative_images/stuffcerca21.png
+./negative_images/cubootherside29.png
+./negative_images/cuboentrada1.png
+./negative_images/cuarto36.png
+./negative_images/cuboentrada31.png
+./negative_images/cuarto45 1.png
+./negative_images/simpleesquina40.png
+./negative_images/cuartoside48.png
+./negative_images/stuffcerca20.png
+./negative_images/simpleesquina1.png
+./negative_images/nada18.png
+./negative_images/cubome17.png
+./negative_images/nada26 1.png
+./negative_images/sala46.png
+./negative_images/cubo35.png
+./negative_images/nada18 1.png
+./negative_images/cubootherside26.png
+./negative_images/cuartoside16.png
+./negative_images/cuboatras34.png
+./negative_images/cuarto12 1.png
+./negative_images/cuartoside0.png
+./negative_images/nada28 1.png
+./negative_images/cuarto21.png
+./negative_images/cuarto38 1.png
+./negative_images/simpleclaro41.png
+./negative_images/cuboside4.png
+./negative_images/cuboentrada21.png
+./negative_images/cuboside21.png
+./negative_images/cubome7.png
+./negative_images/cuartoside35 1.png
+./negative_images/cuboentrada46.png
+./negative_images/sala9.png
+./negative_images/simpleesquina6.png
+./negative_images/nada0.png
+./negative_images/simpleclaro19.png
+./negative_images/sala13.png
+./negative_images/cubome10.png
+./negative_images/cuboside6.png
+./negative_images/cocina9.png
+./negative_images/sala25.png
+./negative_images/cuboside14.png
+./negative_images/nada13.png
+./negative_images/simpleclaro2.png
+./negative_images/nada23.png
+./negative_images/cuboatras0.png
+./negative_images/sala4.png
+./negative_images/cuarto18 1.png
+./negative_images/cubootherside2.png
+./negative_images/sala28.png
+./negative_images/cocina36.png
+./negative_images/cubo32.png
+./negative_images/nada35 1.png
+./negative_images/cuboatras8.png
+./negative_images/simpleclaro39.png
+./negative_images/cuarto16 1.png
+./negative_images/sala22.png
+./negative_images/cuarto37 1.png
+./negative_images/cuboside8.png
+./negative_images/stuffcerca31.png
+./negative_images/cuartoside20 1.png
+./negative_images/simpleclaro42.png
+./negative_images/cubootherside4.png
+./negative_images/cocina6.png
+./negative_images/simpleesquina31.png
+./negative_images/nada24.png
+./negative_images/cuarto8.png
+./negative_images/cuboentrada16.png
+./negative_images/cubootherside10.png
+./negative_images/cuboatras2.png
+./negative_images/nada14 1.png
+./negative_images/cubome8.png
+./negative_images/cuarto2.png
+./negative_images/sala10.png
+./negative_images/cocina25.png
+./negative_images/stuffcerca49.png
+./negative_images/stuffcerca17.png
+./negative_images/sala39.png
+./negative_images/cubootherside35.png
+./negative_images/sala41.png
+./negative_images/simpleclaro37.png
+./negative_images/cuboentrada12.png
+./negative_images/cuboentrada5.png
+./negative_images/simpleclaro15.png
+./negative_images/cubome47.png
+./negative_images/stuffcerca43.png
+./negative_images/simpleclaro33.png
+./negative_images/cocina26.png
+./negative_images/cuboentrada22.png
+./negative_images/nada23 1.png
+./negative_images/cuartoside45.png
+./negative_images/stuffcerca44.png
+./negative_images/simpleclaro0.png
+./negative_images/cuarto1 1.png
+./negative_images/cuarto22.png
+./negative_images/cocina7.png
+./negative_images/cuartoside45 1.png
+./negative_images/cuboatras24.png
+./negative_images/sala36.png
+./negative_images/cuarto30.png
+./negative_images/cubo23.png
+./negative_images/cubome19.png
+./negative_images/simpleclaro5.png
+./negative_images/cuarto25.png
+./negative_images/cuboatras37.png
+./negative_images/cuboatras47.png
+./negative_images/simpleesquina20.png
+./negative_images/nada49.png
+./negative_images/cubo8.png
+./negative_images/cuarto44 1.png
+./negative_images/cocina1.png
+./negative_images/cocina34.png
+./negative_images/stuffcerca18.png
+./negative_images/cubome30.png
+./negative_images/nada4 1.png
+./negative_images/cuartoside3.png
+./negative_images/stuffcerca27.png
+./negative_images/cuartoside5.png
+./negative_images/simpleesquina26.png
+./negative_images/cuartoside24.png
+./negative_images/cocina32.png
+./negative_images/cuartoside35.png
+./negative_images/cubo0.png
+./negative_images/sala8.png
+./negative_images/cubootherside33.png
+./negative_images/cubome16.png
+./negative_images/simpleclaro23.png
+./negative_images/cubo33.png
+./negative_images/cuboatras1.png
+./negative_images/sala0.png
+./negative_images/cocina43.png
+./negative_images/cuartoside33.png
+./negative_images/nada11.png
+./negative_images/simpleclaro28.png
+./negative_images/cuarto21 1.png
+./negative_images/nada29.png
+./negative_images/simpleclaro21.png
+./negative_images/cuboside48.png
+./negative_images/cubootherside27.png
+./negative_images/cuboentrada44.png
+./negative_images/cuarto47.png
+./negative_images/cubootherside43.png
+./negative_images/cubootherside20.png
+./negative_images/cuartoside4.png
+./negative_images/cuboatras39.png
+./negative_images/sala23.png
+./negative_images/cuartoside2.png
+./negative_images/cuboatras5.png
+./negative_images/cuboentrada20.png
+./negative_images/nada31 1.png
+./negative_images/nada19 1.png
+./negative_images/sala5.png
+./negative_images/cuartoside11 1.png
+./negative_images/cuarto17.png
+./negative_images/simpleclaro49.png
+./negative_images/cuboside25.png
+./negative_images/nada25.png
+./negative_images/cuartoside27.png
+./negative_images/nada2 1.png
+./negative_images/cuarto29.png
+./negative_images/cuboentrada18.png
+./negative_images/cubome9.png
+./negative_images/nada13 1.png
+./negative_images/cocina39.png
+./negative_images/nada29 1.png
+./negative_images/cuartoside46.png
+./negative_images/cuartoside43.png
+./negative_images/cuartoside37.png
+./negative_images/cocina31.png
+./negative_images/sala49.png
+./negative_images/simpleclaro4.png
+./negative_images/cuarto44.png
+./negative_images/cuboatras10.png
+./negative_images/cuartoside8 1.png
+./negative_images/nada26.png
+./negative_images/nada37 1.png
+./negative_images/cuboside19.png
+./negative_images/cuboatras22.png
+./negative_images/sala34.png
+./negative_images/cuarto48 1.png
+./negative_images/cuartoside34 1.png
+./negative_images/cuartoside25 1.png
+./negative_images/cuboatras32.png
+./negative_images/sala31.png
+./negative_images/cocina3.png
+./negative_images/cuboentrada13.png
+./negative_images/nada5 1.png
+./negative_images/cuartoside7 1.png
+./negative_images/nada30 1.png
+./negative_images/cocina8.png
+./negative_images/simpleesquina4.png
+./negative_images/cuarto5.png
+./negative_images/cuboside1.png
+./negative_images/cuarto4 1.png
+./negative_images/cuarto25 1.png
+./negative_images/cuboentrada2.png
+./negative_images/cuarto39 1.png
+./negative_images/simpleesquina22.png
+./negative_images/cuartoside3 1.png
+./negative_images/cuartoside42 1.png
+./negative_images/cubo7.png
+./negative_images/cuartoside38.png
+./negative_images/nada5.png
+./negative_images/stuffcerca9.png
+./negative_images/sala16.png
+./negative_images/stuffcerca1.png
+./negative_images/simpleesquina38.png
+./negative_images/cocina23.png
+./negative_images/cubome4.png
+./negative_images/cuarto41.png
+./negative_images/cuartoside9 1.png
+./negative_images/simpleclaro48.png
+./negative_images/cubo39.png
+./negative_images/cuarto11.png
+./negative_images/cuartoside29.png
+./negative_images/cuboatras15.png
+./negative_images/cuarto4.png
+./negative_images/sala19.png
+./negative_images/simpleclaro3.png
+./negative_images/cuartoside29 1.png
+./negative_images/simpleclaro7.png
+./negative_images/simpleclaro11.png
+./negative_images/cubome43.png
+./negative_images/cuartoside21.png
+./negative_images/cocina15.png
+./negative_images/cuboside34.png
+./negative_images/nada22.png
+./negative_images/cubo18.png
+./negative_images/cuboside20.png
+./negative_images/cuartoside27 1.png
+./negative_images/stuffcerca22.png
+./negative_images/cuarto15 1.png
+./negative_images/stuffcerca24.png
+./negative_images/cuboside17.png
+./negative_images/nada12.png
+./negative_images/cuartoside19 1.png
+./negative_images/cocina24.png
+./negative_images/cuartoside17.png
+./negative_images/cuboentrada34.png
+./negative_images/cubo2.png
+./negative_images/cuarto42.png
+./negative_images/nada31.png
+./negative_images/cuartoside24 1.png
+./negative_images/simpleclaro24.png
+./negative_images/cubootherside31.png
+./negative_images/cuartoside8.png
+./negative_images/cuartoside23 1.png
+./negative_images/cuartoside39.png
+./negative_images/nada21 1.png
+./negative_images/sala45.png
+./negative_images/cuboatras31.png
+./negative_images/nada6 1.png
+./negative_images/cuarto15.png
+./negative_images/cubootherside1.png
+./negative_images/cuarto6 1.png
+./negative_images/cuartoside10.png
+./negative_images/cubo25.png
+./negative_images/simpleesquina23.png
+./negative_images/cubootherside21.png
+./negative_images/cuboside38.png
+./negative_images/cuarto38.png
+./negative_images/cuarto14 1.png
+./negative_images/cuartoside19.png
+./negative_images/cuartoside12.png
+./negative_images/simpleesquina0.png
+./negative_images/cubome41.png
+./negative_images/cubootherside13.png
+./negative_images/cuboentrada38.png
+./negative_images/cuboside39.png
+./negative_images/cocina18.png
+./negative_images/cuarto42 1.png
+./negative_images/cubome37.png
+./negative_images/cuartoside28 1.png
+./negative_images/nada47.png
+./negative_images/nada24 1.png
+./negative_images/cuarto1.png
+./negative_images/cuboentrada33.png
+./negative_images/cocina0.png
+./negative_images/cuarto46.png
+./negative_images/simpleesquina14.png
+./negative_images/cubo4.png
+./negative_images/nada20.png
+./negative_images/cuboside45.png
+./negative_images/nada11 1.png
+./negative_images/cuartoside30.png
+./negative_images/cuartoside41 1.png
+./negative_images/cuboside32.png
+./negative_images/cuboside49.png
+./negative_images/cubome5.png
+./negative_images/simpleclaro20.png
+./negative_images/sala32.png
+./negative_images/cubome44.png
+./negative_images/cuartoside40 1.png
+./negative_images/nada48.png
+./negative_images/nada37.png
+./negative_images/nada43 1.png
+./negative_images/cuboside3.png
+./negative_images/cuarto5 1.png
+./negative_images/cocina44.png
+./negative_images/cubome39.png
+./negative_images/simpleclaro34.png
+./negative_images/cubome31.png
+./negative_images/simpleesquina5.png
+./negative_images/cubootherside38.png
+./negative_images/cuboatras43.png
+./negative_images/cuboentrada4.png
+./negative_images/cubo27.png
+./negative_images/nada8 1.png
+./negative_images/simpleesquina15.png
+./negative_images/cuboatras48.png
