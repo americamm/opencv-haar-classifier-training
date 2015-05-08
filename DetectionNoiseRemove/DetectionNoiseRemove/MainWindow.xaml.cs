@@ -59,7 +59,7 @@ namespace DetectionNoiseRemove
         //:::::::::::::Call Methods::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            haar1 = new CascadeClassifier(@"C:\Users\AmericaIvone\Documents\opencv-haar-classifier-training\classifier\cascade.xml"); //La compu de escritorio
+            haar1 = new CascadeClassifier(@"C:\Users\America\Documents\opencv-haar-classifier-training\classifier\cascade.xml"); //La compu de escritorio
             
             EncuentraInicializaKinect();
             CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering);
@@ -201,7 +201,7 @@ namespace DetectionNoiseRemove
         {
             if (frameDepth != null)
             {
-                System.Drawing.Rectangle[] hands = haar.DetectMultiScale(frameDepth, 1.4, 0, new System.Drawing.Size(frameDepth.Width / 9, frameDepth.Height / 9), new System.Drawing.Size(frameDepth.Width / 4, frameDepth.Height / 4));
+                System.Drawing.Rectangle[] hands = haar.DetectMultiScale(frameDepth, 1.4, 3, new System.Drawing.Size(frameDepth.Width / 9, frameDepth.Height / 9), new System.Drawing.Size(frameDepth.Width / 4, frameDepth.Height / 4));
 
                 foreach (System.Drawing.Rectangle roi in hands)
                 {
