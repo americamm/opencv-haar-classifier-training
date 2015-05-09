@@ -96,6 +96,7 @@ namespace DetecttionHandAgrupingRectangles
 
             Image<Gray, Byte> imagenDepth = new Image<Gray, Byte>(640, 480);
             Image<Bgra, Byte> imagenMapped = new Image<Bgra, Byte>(640, 480);
+            Image<Gray, Byte> imagenRectInter = new Image<Gray, Byte>(640, 480); 
 
             Image<Gray, Byte> colorDetection = new Image<Gray, Byte>(640, 480);
             Image<Gray, Byte> mappedDetection = new Image<Gray, Byte>(640, 480);
@@ -105,6 +106,7 @@ namespace DetecttionHandAgrupingRectangles
             System.Drawing.Rectangle[] HandsBoth;
 
             List<System.Drawing.Rectangle[]> ListRectanglesArray;
+            List<List<System.Drawing.Rectangle>> ListOfListRectIntersected = new List<List<System.Drawing.Rectangle>>(); 
             //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
             kinectArrayBytes = PollData();
@@ -113,6 +115,7 @@ namespace DetecttionHandAgrupingRectangles
             {
 
                 imagenDepth.Bytes = kinectArrayBytes[0];
+                imagenRectInter.Bytes = kinectArrayBytes[0];
                 //imagenMapped.Bytes = kinectArrayBytes[1];
 
                 //Preposesing imagen for the detection, remove of noise in the image of depth and covertionsof color image. 
@@ -132,19 +135,31 @@ namespace DetecttionHandAgrupingRectangles
                 //return the hand detection in each rectangle obteined in the previos detection; 
                 ListRectanglesArray = DetectHandRGB(mappedDetection, HandsDepth);
 
-                /*foreach (System.Drawing.Rectangle roi in ListRectangles)
+                ListOfListRectIntersected = GetIntersectedRectangles(HandsDepth);
+                
+                //Print the stuff 
+                if (ListOfListRectIntersected.Count != 0)
                 {
                     Gray colorcillo = new Gray(double.MinValue);
-                    mappedDetection.Draw(roi, colorcillo, 3);
+                    foreach (List<System.Drawing.Rectangle> listaRec in ListOfListRectIntersected)
+                    {
+                        foreach (System.Drawing.Rectangle roi in listaRec)
+                        {
+                            imagenRectInter.Draw(roi, colorcillo, 3);
+                        }
+                    }
                 }
+
+
                 //mappedDetection.Save(@"C:\images\" + contador.ToString() + ".png");
-                contador++;*/
+                //contador++;
 
                 //Convert to bgra for the display 
                 //imagenMapped = mappedDetection.Convert<Bgra, Byte>();
 
                 //Display the images
                 DepthImage.Source = depthWriteablebitmap(depthDetection);
+                chekingProgram.Source = depthWriteablebitmap(imagenRectInter); 
             }//end if
         }//end CompositionTarget_Rendering
 
@@ -252,7 +267,7 @@ namespace DetecttionHandAgrupingRectangles
             {
                 Gray colorcillo = new Gray(double.MaxValue);
 
-                System.Drawing.Rectangle[] hands = haar.DetectMultiScale(frame, 1.5, 0, new System.Drawing.Size(frame.Width / 9, frame.Height / 9), new System.Drawing.Size(frame.Width / 4, frame.Height / 4));
+                System.Drawing.Rectangle[] hands = haar.DetectMultiScale(frame, 1.3, 0, new System.Drawing.Size(frame.Width / 7, frame.Height / 7), new System.Drawing.Size(frame.Width / 4, frame.Height / 4));
 
                 foreach (System.Drawing.Rectangle roi in hands)
                 {
@@ -268,29 +283,54 @@ namespace DetecttionHandAgrupingRectangles
 
 
 
-        private List<System.Drawing.Rectangle[]> GetIntersectedRectangles(System.Drawing.Rectangle[] DepthRA)
+        private List<List<System.Drawing.Rectangle>> GetIntersectedRectangles(System.Drawing.Rectangle[] DepthRA)
         {
-            List<System.Drawing.Rectangle> intesectedRect = new List<System.Drawing.Rectangle>();
-            List<System.Drawing.Rectangle> lista1 = new List<System.Drawing.Rectangle>(); 
+            int startI = 0;
+            bool alwaysIntersected = true; 
+            List<int> listIndex = new List<int>(); 
+            List<System.Drawing.Rectangle> lista = new List<System.Drawing.Rectangle>();
+            List<List<System.Drawing.Rectangle>> intesectedRect = new List<List<System.Drawing.Rectangle>>(); 
+            
+            
 
             if (DepthRA.Length > 2)
             { 
-                for (int i = 0; i < DepthRA.Length; i++)
+                for (int i = startI; i < DepthRA.Length; i++)
                 {
                     for (int j = i+1; j < DepthRA.Length; j++)
                     {
                         if (DepthRA[i].IntersectsWith(DepthRA[j]))
                         {
-                            if (lista1.Count == 0)  
-                                lista1.Add(DepthRA[i]);
+                            if (lista.Count == 0)
+                                lista.Add(DepthRA[i]);
 
-                            lista1.Add(DepthRA[j]);
+                            lista.Add(DepthRA[j]);
                         }
-                    }                   
+                        else
+                        {
+                            listIndex.Add(j);
+                            alwaysIntersected = false; 
+                        }
+                    }
+
+                    if (alwaysIntersected)
+                        break; 
+                    else
+                        startI = listIndex[0];
+
+                    if (lista.Count > 2)
+                        intesectedRect.Add(lista);
+                    else
+                        lista.Clear(); 
                 }
             }
-            
-            return null; 
+
+            /*if (intesectedRect.Count == 0)
+            { 
+                lista.Add(System.Drawing.Rectangle.Empty);
+                intesectedRect.Add(lista); 
+            }*/ 
+            return intesectedRect; 
         }//end method
 
 
